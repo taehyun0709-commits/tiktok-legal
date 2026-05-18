@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>K-HACCP - TikTok OAuth Callback</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, "Noto Sans KR", sans-serif; max-width: 640px; margin: 60px auto; padding: 0 20px; color: #222; line-height: 1.6; text-align: center; }
+  h1 { color: #0066cc; font-size: 22px; }
+  .box { background: #f9f9f9; border: 1px solid #e5e7eb; border-radius: 10px; padding: 24px; margin-top: 20px; }
+  code { background: #eef; padding: 2px 6px; border-radius: 4px; font-size: 13px; word-break: break-all; }
+  .small { color: #777; font-size: 13px; margin-top: 24px; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>K-HACCP — TikTok OAuth Callback</h1>
+
+<div class="box">
+  <p><strong>This page receives the OAuth 2.0 authorization code from TikTok</strong> after the operator authorizes K-HACCP Marketing Automation.</p>
+  <p>The code is then forwarded to the K-HACCP backend for token exchange.</p>
+  <p id="status">Reading callback parameters…</p>
+</div>
+
+<p class="small">
+  If you reached this page directly without going through TikTok login, please return to the
+  <a href="index.html">K-HACCP Marketing Automation home</a>.
+</p>
+
+<script>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    var code = p.get("code");
+    var state = p.get("state");
+    var error = p.get("error");
+    var el = document.getElementById("status");
+    if (error) {
+      el.innerHTML = "Error: <code>" + error + "</code>";
+    } else if (code) {
+      el.innerHTML = "Authorization code received. Length: <code>" + code.length + "</code>" +
+                     (state ? "<br>State: <code>" + state + "</code>" : "");
+    } else {
+      el.innerHTML = "No code parameter present. Direct visit detected.";
+    }
+  })();
+</script>
+
+</body>
+</html>
