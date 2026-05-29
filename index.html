@@ -1,79 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>K-HACCP Marketing Automation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>한국 식품 안전 HACCP 솔루션 마케팅 자동화</title>
+<meta name="description" content="한국 식품 안전 HACCP 솔루션 마케팅 자동화 — K-HACCP 운영자용 마케팅 자동화 도구. 운영자 본인 계정에 콘텐츠를 발행합니다." />
 <style>
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Noto Sans KR", sans-serif; max-width: 860px; margin: 0 auto; padding: 40px 20px; color: #222; line-height: 1.65; background: #fafafa; }
-  header { border-bottom: 3px solid #0066cc; padding-bottom: 16px; margin-bottom: 28px; }
-  h1 { font-size: 28px; margin: 0 0 8px; color: #0a2540; }
-  .tagline { color: #555; font-size: 16px; }
-  h2 { font-size: 20px; margin-top: 32px; color: #0066cc; border-left: 4px solid #0066cc; padding-left: 12px; }
-  ul { padding-left: 22px; }
-  li { margin: 6px 0; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0; }
-  .stat { background: #fff; padding: 14px; border-radius: 8px; border: 1px solid #e5e7eb; text-align: center; }
-  .stat .num { font-size: 22px; font-weight: 700; color: #0066cc; }
-  .stat .lbl { font-size: 13px; color: #666; margin-top: 4px; }
-  .flow { background: #fff; padding: 18px; border-radius: 8px; border: 1px solid #e5e7eb; }
-  .flow ol { margin: 0; padding-left: 22px; }
-  .links { margin-top: 28px; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; }
-  .links a { color: #0066cc; text-decoration: none; margin-right: 16px; }
-  .links a:hover { text-decoration: underline; }
-  footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #777; font-size: 13px; text-align: center; }
+  body { font-family: -apple-system, "Malgun Gothic", sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.7; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; margin-top: 32px; }
+  .app { font-weight: 700; }
+  a { color: #0a66c2; }
+  footer { margin-top: 40px; font-size: 13px; color: #666; border-top: 1px solid #eee; padding-top: 16px; }
 </style>
 </head>
 <body>
+  <h1>한국 식품 안전 HACCP 솔루션 마케팅 자동화</h1>
+  <p><span class="app">한국 식품 안전 HACCP 솔루션 마케팅 자동화</span>(이하 "본 앱")는 K-HACCP(한국 식품안전 HACCP) 솔루션 운영자를 위한 마케팅 콘텐츠 자동화 도구입니다.</p>
 
-<header>
-  <h1>K-HACCP Marketing Automation</h1>
-  <div class="tagline">Marketing automation for K-HACCP — Korean food-safety HACCP solution</div>
-</header>
+  <h2>서비스 개요</h2>
+  <p><span class="app">한국 식품 안전 HACCP 솔루션 마케팅 자동화</span>는 식품안전·HACCP 관련 정보 콘텐츠(영상·이미지·텍스트)를 생성하고, 운영자가 검토·승인한 콘텐츠를 <strong>운영자 본인의 TikTok 계정에만</strong> TikTok Content Posting API를 통해 발행합니다. 타인의 계정에는 게시하지 않습니다.</p>
 
-<h2>About</h2>
-<p>K-HACCP Marketing Automation is an internal tool that helps operators of <strong>K-HACCP</strong>, a Korean food-safety HACCP solution serving 200+ B2B customers, automatically generate and publish marketing content (short videos, blog posts, card news) to the operator's own social-media accounts including TikTok.</p>
+  <h2>TikTok 연동 기능</h2>
+  <ul>
+    <li>Login Kit — 운영자가 본인 TikTok 계정으로 로그인(OAuth 2.0)</li>
+    <li>Content Posting API (video.upload) — 운영자 계정에 콘텐츠를 초안으로 업로드, 운영자가 TikTok 앱에서 최종 게시</li>
+  </ul>
 
-<h2>By the numbers</h2>
-<div class="stats">
-  <div class="stat"><div class="num">200+</div><div class="lbl">B2B customers</div></div>
-  <div class="stat"><div class="num">4.65 / 5</div><div class="lbl">Customer rating</div></div>
-  <div class="stat"><div class="num">26</div><div class="lbl">IP rights</div></div>
-  <div class="stat"><div class="num">10+</div><div class="lbl">Channel partners</div></div>
-</div>
+  <h2>약관·정책</h2>
+  <ul>
+    <li><a href="tiktok-terms.html">서비스 이용약관</a></li>
+    <li><a href="tiktok-privacy.html">개인정보 처리방침</a></li>
+  </ul>
 
-<h2>TikTok integration</h2>
-<div class="flow">
-  <ol>
-    <li><strong>Login</strong> — operator authenticates with their own TikTok account via official OAuth 2.0.</li>
-    <li><strong>Draft</strong> — system generates short-form video drafts (caption + hashtags + clip) from K-HACCP product news, customer FAQs, and food-safety law updates.</li>
-    <li><strong>Review &amp; Publish</strong> — operator reviews the draft and clicks <em>Publish</em>; the app calls <code>video.publish</code> on the operator's own account only.</li>
-    <li><strong>Dashboard</strong> — operator sees publish history and stats for their own posts only.</li>
-  </ol>
-</div>
-<p style="margin-top: 14px;">
-  <strong>Scopes used:</strong> <code>user.info.basic</code>, <code>video.upload</code>, <code>video.publish</code><br>
-  <strong>Frequency:</strong> 1-3 posts/day on the operator's own account.<br>
-  <strong>Audience:</strong> K-HACCP solution operators (B2B). End TikTok users see only the operator's published posts.
-</p>
-
-<h2>Compliance</h2>
-<ul>
-  <li>All content is operator-created and operator-approved.</li>
-  <li>The app does NOT post third-party content, perform automated likes/follows/comments, mass-publish, or scrape other users.</li>
-  <li>Full adherence to TikTok Developer Terms and Community Guidelines.</li>
-</ul>
-
-<div class="links">
-  <strong>Legal:</strong>
-  <a href="tiktok-terms.html">Terms of Service</a>
-  <a href="tiktok-privacy.html">Privacy Policy</a>
-</div>
-
-<footer>
-  K-HACCP (대표 김태현) · taehyun0709@gmail.com · 010-9384-0709 · <a href="https://k-haccp.kr">k-haccp.kr</a>
-</footer>
-
+  <footer>
+    앱 이름: 한국 식품 안전 HACCP 솔루션 마케팅 자동화<br />
+    문의: 1833-9612 / 010-9384-0709 · 운영: K-HACCP · 시행일: 2026-05-28
+  </footer>
 </body>
 </html>
